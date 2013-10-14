@@ -1,0 +1,18 @@
+{% extends "MierderBlogBundle::base.html.twig" %}
+
+{% block content %}
+
+{% include 'top9commonBundle:Partials:topBar.html.twig'%}
+
+    <h1>LIST</h1>
+
+    {% for post in posts %}
+        <hr>
+        <a href="{{ path('view_post',{'id':post.id})}}">    
+            <h1>{{ post.title }}</h1>
+        </a>
+        <h4>{{ post.date |date("m/d/Y")  }}</h4>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+    
+{% endblock %}

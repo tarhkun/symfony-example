@@ -1,0 +1,5 @@
+mierder_blog:
+    resource: "@MierderBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
